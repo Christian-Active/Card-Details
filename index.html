@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Interactive Bank Details</title>
+</head>
+<body>
+  <div class="head">
+    <div class="gradient">
+      <div class="content1">
+        <img src="./images/bg-card-back.png" alt="">
+        <p id ="back-cvc">000</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content2">
+        <img src="./images/bg-card-front.png" alt="">
+        <div class="circle"></div>
+        <p id="bank-no">0000 0000 0000 0000</p>
+        <p id="name">CHRIS AZUKA</p>
+        <p id="date"><span id="month">00</span>/<span id="year">00</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="complete">
+    <div><img src="./images/icon-complete.svg" alt=""></div>
+    <div><p class="thanks">THANK YOU!</p></div>
+    <div><p class="add">We have added your card details</p></div>
+  </div>
+
+  <div id="input">
+    <div class="form-control">
+      <label for="Name">CardHolder Name</label><br>
+      <input type="text" id="card-name" placeholder="   e.g. Chris Azuka" maxlength="20">
+      <small class = "error"></small>
+    </div>
+
+    <div class="form-control">
+      <label for="Number">Card Number</label><br>
+      <input type="text" id="card-number" class= "number" placeholder="   e.g. 1234 5678 9012 0000" maxlength="16">
+      <small class = "error"></small>
+    </div>
+
+    <div class="myc">
+      <div class="my">
+        <div><label for="Exp Date">exp. date(mm/yy)</label></div>
+        <div class="mmyy">
+          <div class="form-control">
+            <input type="text" id="card-month" class="number" placeholder="MM"  maxlength="2">
+            <small class = "error"></small>
+          </div>
+          <div class="form-control">
+            <input type="text" id="card-year"class="number" placeholder="YY"  maxlength="2">
+            <small class = "error"></small>
+          </div>
+        </div>
+      </div>
+
+      <div class="cvc">
+        <div><label for="Cvc">cvc</label></div>
+        <div class="form-control"><input type="text" id="card-cvc" class="number" placeholder="   e.g. 123" maxlength="3">
+        <small class = "error"></small>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div id="input">
+    <div>
+      <label for="Name">CardHolder Name</label><br>
+      <input type="text" id="card-name" placeholder="   e.g. Chris Azuka" maxlength="20">
+      <p class = "error" id="error1"></p>
+    </div>
+
+    <div>
+      <label for="Number">Card Number</label><br>
+      <input type="text" id="card-number" class= "number" placeholder="   e.g. 1234 5678 9012 0000" maxlength="16">
+      <p class = "error" id="error2"></p>
+    </div>
+
+    <div class="myc">
+      <div class="my">
+        <div><label for="Exp Date">exp. date(mm/yy)</label></div>
+        <div class="mmyy">
+          <div>
+            <input type="text" id="card-month" class="number" placeholder="MM"  maxlength="2">
+            <p class = "error" id="error3"></p>
+          </div>
+          <div>
+            <input type="text" id="card-year"class="number" placeholder="YY"  maxlength="2">
+            <p class = "error" id="error3"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cvc">
+        <div><label for="Cvc">cvc</label></div>
+        <div><input type="text" id="card-cvc" class="number" placeholder="   e.g. 123" maxlength="3"></div>
+        <p class = "error" id="error5"></p>
+      </div>
+
+  </div> -->
+  <button id="confirm">Confirm</button>
+  <script src="./js/script.js"></script>
+</body>
+</html>

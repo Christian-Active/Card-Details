@@ -1,0 +1,256 @@
+/* Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px */
+:root{
+    --linear-grad: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --input-err:  hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray-violet: hsl(270, 3%, 87%);
+    --dark-gray-violet: hsl(279, 6%, 55%);
+    --dark-violet: hsl(278, 68%, 11%);
+    --font: 18px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.head{
+    background-image: url(/images/bg-main-mobile.png);
+    width: 100%;
+    height: 230px;
+}
+.gradient{
+    position: absolute;
+    top: 30;
+    right: 25;
+}
+.card{
+    position: absolute;
+    top: 16;
+    left: 15;
+}
+.content1{
+    position: relative;
+    width: 280px;
+}
+.content1 img{
+    width: 100%;
+}
+.content1 p{
+    position: absolute;
+    top: 67px;
+    right: 30px;
+    letter-spacing: 2px;
+    color: var(--white);
+    font-size: 13px;
+}
+.content2{
+    position: relative;
+    width: 280px;
+    margin-top: 100px;
+}
+.content2 img{
+    width: 100%;
+}
+.content2 .circle{
+    position: absolute;
+    top: 17;
+    left: 20;
+    width: 35px;
+    height: 35px;
+    border-radius:50%;
+    background-color: var(--white);
+}
+.content2 .circle::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: block;
+    border:1px solid var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 10;
+    left: 50;
+}
+.content2 #bank-no{
+    position: absolute;
+    left: 20;
+    bottom: 45;
+    font-size: 20;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+.content2 #bank-no span{
+    margin-right: 7px;
+}
+.content2 #name{
+    text-transform: uppercase;
+    position: absolute;
+    left: 20;
+    bottom: 20;
+    font-size: 11;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+.content2 #date{
+    position: absolute;
+    right: 22;
+    bottom: 20;
+    font-size: 11;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+
+#complete{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.thanks{
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: var(--dark-violet);
+}
+.add{
+    font-size: 20;
+    margin-top: 20px;
+    color: var(--dark-gray-violet);
+}
+
+#input{  
+    margin-top: 100px;
+    margin-left: 20px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+#input label{
+    color: var(--dark-violet);
+    text-transform: uppercase;
+    user-select: none;
+}
+input{
+    text-transform: capitalize; 
+    margin-top: 10px;
+    margin-bottom: 2px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid var(--light-gray-violet);
+    color: var(--dark-gray-violet);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+small{
+    display: block;
+    user-select: none;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    color: var(--input-err);
+    letter-spacing: 0;
+}
+.input-err{
+    border: 1px solid var(--input-err);
+}
+.input-suc{
+    border: 1px solid var(--dark-violet);
+}
+
+#error4{
+    margin-left: 25;
+}
+#card-name, #card-number{
+    width: 90%;
+    padding-left: 10;
+    max-width: 500px 
+}
+.myc{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 90%;
+    max-width: 500px
+}
+.mmyy{
+    display: flex;
+}
+#card-month, #card-year{
+    width: 90%;
+    max-width: 80px;
+    margin-right: 8%;
+    text-align: center;
+}
+#card-cvc{
+    width: 100%;
+    padding-left: 10;
+}
+button{
+    width: 90%;
+   max-width: 500px;
+   margin-top: 10px;
+   padding: 15px 0;
+   border: none;
+   border-radius: 10px;
+   background-color: var(--dark-violet);
+   color: var(--white);
+   font-size: 18px;
+   letter-spacing: 1px;
+   cursor: pointer;
+   outline: none;
+}
+
+@media screen and (min-width: 720px) {
+    body{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .head{
+        background-image: url(/images/bg-main-desktop.png);
+        width: 100%;
+        height: 100vh;
+    }
+    .card{
+        position: absolute;
+        top: 100;
+        left: calc(30% - 200px);
+    }
+    .gradient{
+        position: absolute;
+        top: 380;
+        left: calc(30% - 140px);
+    }
+    #complete{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    #input{  
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    button{
+        width: 90%;
+        margin-left: 0px;
+     }
+}
